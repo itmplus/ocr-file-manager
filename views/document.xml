@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="documents_tree_view" model="ir.ui.view">
+            <field name="name">ocr.tree</field>
+            <field name="model">ocr.document</field>
+            <field name="arch" type="xml">
+                <tree string="ocr.tree" >
+                    <field name="key"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="documents_form_view" model="ir.ui.view" >
+            <field name="name">ocr.form</field>
+            <field name="model">ocr.document</field>
+            <field name="arch" type="xml">
+                <form string="OCR form" >
+
+                    <header>
+                        <button string="Run OCR" type="object" name="generate_record_name" class="oe_highlight"/>
+                        <button string="Generate password" type="object" name="generate_record_password"/>
+                        <button string="Clear data" type="object" name="clear_record_data"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="key"/>
+                            <field name="name"/>
+                            <field name="type"/>
+                            <field name="content"/>
+                            <field name="path"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="ocr.action_window">
+            <field name="name">DOCUMENTS</field>
+            <field name="res_model">ocr.document</field>
+            <field name="view_mode">tree,form,search</field>
+        </record>
+
+
+        <!-- Top menu item -->
+        <menuitem name="OCR" id="ocr.menu_root"/>
+
+        <!-- menu categories -->
+        <menuitem name="Menu" id="ocr.menu_1" parent="ocr.menu_root"/>
+
+
+        <!-- actions -->
+        <menuitem name="Documents" id="ocr.menu_document" parent="ocr.menu_1" action="ocr.action_window"/>
+        <!-- <menuitem name="Server to list" id="ocr" parent="ocr.menu_2" -->
+                  <!-- action="ocr.action_server"/> -->
+
+  </data>
+</openerp>
