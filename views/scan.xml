@@ -2,7 +2,7 @@
 <openerp>
     <data>
         <!-- actions opening views on models -->
-        <record model="ir.actions.act_window" id="ocr.scan_window">
+        <record model="ir.actions.act_window" id="ocr_scan_window">
             <field name="name">SCAN</field>
             <field name="res_model">ocr.scan</field>
             <field name="view_mode">form</field>
@@ -20,7 +20,7 @@
             </field>
         </record>
 
-        <menuitem name="Scan" id="ocr.menu_scan" parent="ocr.menu_1" action="ocr.scan_window"/>
+        <menuitem name="Scan" id="ocr_menu_scan" parent="ocr_menu_1" action="ocr_scan_window"/>
 
     </data>
 </openerp>

@@ -37,7 +37,7 @@
         </record>
 
         <!-- actions opening views on models -->
-        <record model="ir.actions.act_window" id="ocr.action_window">
+        <record model="ir.actions.act_window" id="ocr_action_window">
             <field name="name">DOCUMENTS</field>
             <field name="res_model">ocr.document</field>
             <field name="view_mode">tree,form,search</field>
@@ -45,14 +45,14 @@
 
 
         <!-- Top menu item -->
-        <menuitem name="OCR" id="ocr.menu_root"/>
+        <menuitem name="OCR" id="ocr_menu_root"/>
 
         <!-- menu categories -->
-        <menuitem name="Menu" id="ocr.menu_1" parent="ocr.menu_root"/>
+        <menuitem name="Menu" id="ocr_menu_1" parent="ocr_menu_root"/>
 
 
         <!-- actions -->
-        <menuitem name="Documents" id="ocr.menu_document" parent="ocr.menu_1" action="ocr.action_window"/>
+        <menuitem name="Documents" id="ocr_menu_document" parent="ocr_menu_1" action="ocr_action_window"/>
         <!-- <menuitem name="Server to list" id="ocr" parent="ocr.menu_2" -->
                   <!-- action="ocr.action_server"/> -->
 
